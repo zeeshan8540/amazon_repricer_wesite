@@ -72,7 +72,7 @@ function initSupportForm() {
       });
 
       if (response.ok) {
-        showFeedback('success', `✓ Thank you! Your support request has been sent. We will reply to ${email} within 24 business hours.`);
+        showFeedback('success', '✓ Thank you! Your support request has been sent. Our support team will contact you within 24 business hours.');
         form.reset();
       } else {
         const data = await response.json().catch(() => ({}));
