@@ -1,3 +1,5 @@
+import { ENV } from './env-config.js';
+
 function initSupportForm() {
   const form = document.querySelector('form[name="support"]');
   if (!form) return;
@@ -42,32 +44,44 @@ function initSupportForm() {
       return;
     }
 
+    const env = window.__ENV__ || ENV || {};
+    const endpoint = env.FORMSPREE_ENDPOINT || (typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env.VITE_FORMSPREE_ENDPOINT : '');
+
+    if (!endpoint) {
+      showFeedback('error', 'Support form endpoint is not configured. Please set VITE_FORMSPREE_ENDPOINT in your environment or Netlify settings.');
+      return;
+    }
+
     // Disable button during submission
     submitBtn.disabled = true;
     submitBtn.style.opacity = '0.75';
     submitBtn.textContent = 'Sending Support Request…';
 
     try {
-      // If deployed on Netlify, attempt form POST fetch
-      const formData = new FormData(form);
-      const response = await fetch('/', {
+      const response = await fetch(endpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email,
+          subject: subject,
+          message: message
+        })
       });
 
-      if (response.ok || response.status === 200 || response.status === 302) {
-        showFeedback('success', '✓ Thank you! Your support request has been sent. Our team will contact you within 24 business hours.');
+      if (response.ok) {
+        showFeedback('success', `✓ Thank you! Your support request has been sent. We will reply to ${email} within 24 business hours.`);
         form.reset();
       } else {
-        // Local dev fallback success simulation
-        showFeedback('success', '✓ Thank you! Your support message has been recorded. Our support team will get back to you shortly.');
-        form.reset();
+        const data = await response.json().catch(() => ({}));
+        const errMsg = data.errors ? data.errors.map(err => err.message).join(', ') : 'Unable to send message.';
+        showFeedback('error', `Submission Error: ${errMsg}`);
       }
     } catch (err) {
-      console.warn('Netlify form post error, providing fallback success response:', err);
-      showFeedback('success', '✓ Thank you! Your message has been sent. We will respond to ' + email + ' within 24 business hours.');
-      form.reset();
+      console.error('Error submitting Formspree support form:', err);
+      showFeedback('error', 'Network error occurred while submitting form. Please check your connection or contact support directly via email.');
     } finally {
       submitBtn.disabled = false;
       submitBtn.style.opacity = '1';
@@ -81,3 +95,4 @@ if (document.readyState === 'loading') {
 } else {
   initSupportForm();
 }
+
