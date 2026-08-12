@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Support & FAQ — Amazon Repricer</title>
+  <meta name="description" content="Need help with Amazon Repricer? Contact our support team or browse frequently asked questions regarding billing, SP-API, and refunds.">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon">⚡</div>
+        <span>Amazon Repricer</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/features/">Features</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/support/" class="active">Support & FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="/pricing/" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: var(--space-16); padding-bottom: var(--space-20);">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-12);">
+      <h1>Customer Support & Help Center</h1>
+      <p style="font-size: var(--scale-lg); margin-top: var(--space-4);">
+        We are here to assist you with onboarding, Amazon SP-API setup, and subscription inquiries.
+      </p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom: var(--space-16); align-items: start;">
+      <!-- Contact Form -->
+      <div class="card">
+        <h3 style="margin-bottom: var(--space-4);">Send Us a Message</h3>
+        <p style="margin-bottom: var(--space-6); font-size: var(--scale-sm);">
+          Fill out the form below or email us directly at <a href="mailto:support@amazonrepricer.com">support@amazonrepricer.com</a>. We reply within 24 business hours.
+        </p>
+
+        <form name="support" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="support" />
+
+          <div class="form-group">
+            <label class="form-label" for="email">Your Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="seller@company.com" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="SP-API connection or Billing question" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="How can we help you today?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Send Support Request</button>
+        </form>
+      </div>
+
+      <!-- Quick Info Card -->
+      <div class="card" style="background-color: var(--color-surface-raised);">
+        <h3 style="margin-bottom: var(--space-4);">Support Contact Details</h3>
+
+        <div style="margin-bottom: var(--space-6);">
+          <div style="font-weight: 600; color: var(--color-text-primary); margin-bottom: var(--space-1);">Email Support Inbox</div>
+          <a href="mailto:support@amazonrepricer.com" style="font-size: var(--scale-base);">support@amazonrepricer.com</a>
+        </div>
+
+        <div style="margin-bottom: var(--space-6);">
+          <div style="font-weight: 600; color: var(--color-text-primary); margin-bottom: var(--space-1);">Operating Hours</div>
+          <div style="font-size: var(--scale-sm); color: var(--color-text-secondary);">Monday – Friday: 9:00 AM – 6:00 PM EST</div>
+        </div>
+
+        <div style="margin-bottom: var(--space-6);">
+          <div style="font-weight: 600; color: var(--color-text-primary); margin-bottom: var(--space-1);">Merchant of Record Billing</div>
+          <div style="font-size: var(--scale-sm); color: var(--color-text-secondary);">
+            Payments and subscriptions are securely processed by <strong>Paddle.com Market Ltd</strong>. Receipts and invoice updates can be managed directly via your checkout receipt email link.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div id="faq" style="max-width: 840px; margin: 0 auto;">
+      <h2 style="text-align: center; margin-bottom: var(--space-8);">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">How does subscription billing work?</div>
+          <div class="faq-answer">
+            Subscriptions are billed monthly in advance via Paddle, our merchant of record. You can upgrade, downgrade, or cancel your plan at any time from your account settings or receipt link.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What is your refund policy?</div>
+          <div class="faq-answer">
+            We offer a full 7-day money-back guarantee for initial subscription purchases. If you are unsatisfied within 7 days, contact <a href="mailto:support@amazonrepricer.com">support@amazonrepricer.com</a> for an immediate full refund. See our full <a href="/legal/refund-policy.html">Refund & Cancellation Policy</a>.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is my Amazon Seller Central data secure?</div>
+          <div class="faq-answer">
+            Yes. We connect via official Amazon Selling Partner API (SP-API) OAuth authorization. We never ask for or store your Amazon Seller Central login credentials or password.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I prevent repricing below my cost?</div>
+          <div class="faq-answer">
+            Absolutely. Every SKU has mandatory minimum price floor settings. Our repricer strictly enforces your profit floors and will never submit a price update below your established minimum.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="brand-logo">
+            <div class="brand-icon">⚡</div>
+            <span>Amazon Repricer</span>
+          </a>
+          <p>Automated algorithmic price repricing for Amazon sellers powered by official SP-API integration.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/pricing/">Pricing Matrix</a></li>
+            <li><a href="/pricing/starter.html">Starter Plan</a></li>
+            <li><a href="/pricing/business.html">Business Plan</a></li>
+            <li><a href="/pricing/professional.html">Professional Plan</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support & Help</h4>
+          <ul>
+            <li><a href="/support/">Contact Support</a></li>
+            <li><a href="/support/#faq">Frequently Asked Questions</a></li>
+            <li><a href="mailto:support@amazonrepricer.com">support@amazonrepricer.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul>
+            <li><a href="/legal/terms.html">Terms of Service</a></li>
+            <li><a href="/legal/privacy.html">Privacy Policy</a></li>
+            <li><a href="/legal/refund-policy.html">Refund & Cancellation Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Amazon Repricer. All rights reserved.</div>
+        <div class="badge-paddle">
+          <span>🔒 Secured & Billed by Paddle (Merchant of Record)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../scripts/nav.js"></script>
+  <script type="module" src="../scripts/support.js"></script>
+</body>
+</html>
+

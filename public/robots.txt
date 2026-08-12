@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amazonrepricer.com/sitemap.xml

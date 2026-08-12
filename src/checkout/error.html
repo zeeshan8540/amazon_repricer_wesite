@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Error — Amazon Repricer</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/checkout.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon">⚡</div>
+        <span>Amazon Repricer</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/support/">Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main class="container">
+    <div class="state-card">
+      <div class="state-icon error">✕</div>
+      <h1>Checkout Was Unsuccessful</h1>
+      <p style="font-size: var(--scale-lg); margin-top: var(--space-4); margin-bottom: var(--space-6);">
+        Your card was not charged. The checkout session was cancelled or encountered a payment gateway issue.
+      </p>
+
+      <div style="display: flex; gap: var(--space-4); justify-content: center; margin-top: var(--space-8);">
+        <a href="/pricing/" class="btn btn-primary btn-lg">Try Again / View Pricing</a>
+        <a href="/support/" class="btn btn-secondary btn-lg">Contact Support</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>&copy; 2026 Amazon Repricer. All rights reserved.</div>
+        <div class="badge-paddle">
+          <span>🔒 Secured & Billed by Paddle (Merchant of Record)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="../scripts/nav.js"></script>
+</body>
+</html>
+

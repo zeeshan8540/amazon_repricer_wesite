@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful — Amazon Repricer</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/checkout.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon">⚡</div>
+        <span>Amazon Repricer</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/support/">Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="state-card">
+      <div class="state-icon success">✓</div>
+      <h1>Thank You for Your Subscription!</h1>
+      <p style="font-size: var(--scale-lg); margin-top: var(--space-4); margin-bottom: var(--space-6);">
+        Your payment was processed successfully by Paddle.
+      </p>
+
+      <div style="background-color: var(--color-surface-raised); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4) var(--space-6); font-family: var(--font-mono); font-size: var(--scale-sm); margin-bottom: var(--space-8); display: inline-block;">
+        Transaction Reference ID: <span id="txn-id" style="color: var(--color-accent-hover);">—</span>
+      </div>
+
+      <div style="text-align: left; background-color: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); margin-bottom: var(--space-8);">
+        <h3 style="font-size: var(--scale-base); margin-bottom: var(--space-3);">Next Steps to Activate Your Repricer:</h3>
+        <ol style="padding-left: var(--space-6); display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--scale-sm); color: var(--color-text-secondary);">
+          <li>Check your email inbox for your payment receipt from Paddle.</li>
+          <li>Log in to your Amazon Repricer desktop application or web dashboard.</li>
+          <li>Authorize your Amazon Selling Partner API (SP-API) account to begin automated repricing.</li>
+        </ol>
+      </div>
+
+      <a href="/" class="btn btn-primary btn-lg">Return to Homepage</a>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>&copy; 2026 Amazon Repricer. All rights reserved.</div>
+        <div class="badge-paddle">
+          <span>🔒 Secured & Billed by Paddle (Merchant of Record)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../scripts/nav.js"></script>
+  <script>
+    function initTxn() {
+      const params = new URLSearchParams(window.location.search);
+      const txn = params.get('txn') || params.get('transaction_id') || 'PRD-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+      const el = document.getElementById('txn-id');
+      if (el) el.textContent = txn;
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTxn);
+    } else {
+      initTxn();
+    }
+  </script>
+</body>
+</html>
+

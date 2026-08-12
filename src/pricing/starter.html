@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe to Starter Plan — Amazon Repricer</title>
+  <meta name="description" content="Checkout Starter Plan for Amazon Repricer. $29/month. Includes 500 SKU checks per month and automated Buy Box repricing.">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/checkout.css">
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon">⚡</div>
+        <span>Amazon Repricer</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/features/">Features</a></li>
+        <li><a href="/pricing/" class="active">Pricing</a></li>
+        <li><a href="/support/">Support & FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="/pricing/" class="btn btn-secondary">Back to Pricing</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="checkout-container">
+      <div class="checkout-card">
+        <div class="checkout-header">
+          <div class="connection-status-badge" data-connection-status data-state="loading">
+            <span class="status-dot"></span>
+            <span class="status-text">Checking payment system…</span>
+          </div>
+
+          <h1 class="checkout-plan-title">Starter Plan</h1>
+          <p style="color: var(--color-text-secondary); margin-bottom: var(--space-4);">Essential automation capacity for growing Amazon sellers.</p>
+          <div class="checkout-plan-price">$29.00 <span class="checkout-plan-period">/ month</span></div>
+        </div>
+
+        <div class="checkout-summary-box">
+          <div class="checkout-summary-row">
+            <span>Subscription Tier</span>
+            <span>Amazon Repricer Starter</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Monthly SKU Capacity</span>
+            <span>500 SKU checks / month</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Automation Streams</span>
+            <span>1 Active Stream</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Billing Interval</span>
+            <span>Monthly (Cancel Anytime)</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Total Due Today</span>
+            <span>$29.00 USD</span>
+          </div>
+        </div>
+
+        <div class="checkout-actions">
+          <button type="button" class="btn btn-primary btn-lg btn-block" data-checkout-trigger data-plan="starter">
+            Proceed to Secure Checkout
+          </button>
+          <div class="checkout-guarantee-text">
+            <span>🔒 Encrypted payment processed securely by Paddle (Merchant of Record). Includes 7-day money-back guarantee.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="brand-logo">
+            <div class="brand-icon">⚡</div>
+            <span>Amazon Repricer</span>
+          </a>
+          <p>Automated algorithmic price repricing for Amazon sellers powered by official SP-API integration.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/pricing/">Pricing Matrix</a></li>
+            <li><a href="/pricing/starter.html">Starter Plan</a></li>
+            <li><a href="/pricing/business.html">Business Plan</a></li>
+            <li><a href="/pricing/professional.html">Professional Plan</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support & Help</h4>
+          <ul>
+            <li><a href="/support/">Contact Support</a></li>
+            <li><a href="/support/#faq">Frequently Asked Questions</a></li>
+            <li><a href="mailto:support@amazonrepricer.com">support@amazonrepricer.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul>
+            <li><a href="/legal/terms.html">Terms of Service</a></li>
+            <li><a href="/legal/privacy.html">Privacy Policy</a></li>
+            <li><a href="/legal/refund-policy.html">Refund & Cancellation Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Amazon Repricer. All rights reserved.</div>
+        <div class="badge-paddle">
+          <span>🔒 Secured & Billed by Paddle (Merchant of Record)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../scripts/env-config.js"></script>
+  <script type="module" src="../scripts/checkout.js"></script>
+  <script type="module" src="../scripts/nav.js"></script>
+</body>
+</html>

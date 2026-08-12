@@ -1,0 +1,14 @@
+{
+  "name": "amazon-repricer-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public marketing, legal, support, and checkout website for Amazon Repricer",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.1.0"
+  }
+}
