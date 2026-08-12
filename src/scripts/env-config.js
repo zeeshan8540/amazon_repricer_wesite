@@ -7,7 +7,8 @@ export const ENV = {
   PRICE_ID_STARTER: metaEnv.VITE_PRICE_ID_STARTER || 'pri_01kycw5t7wrakkyv7fs8nb0xt8',
   PRICE_ID_BUSINESS: metaEnv.VITE_PRICE_ID_BUSINESS || 'pri_01kycw7kah781g4fg0tq4jag7y',
   PRICE_ID_PROFESSIONAL: metaEnv.VITE_PRICE_ID_PROFESSIONAL || 'pri_01kycwbnj2cwegkasm8djs8nmf',
-  FORMSPREE_ENDPOINT: metaEnv.VITE_FORMSPREE_ENDPOINT || '',
+  FORMSPREE_ENDPOINT: metaEnv.VITE_FORMSPREE_ENDPOINT || 'https://formspree.io/f/maewjbwv',
+
   SUPPORT_EMAIL: metaEnv.VITE_SUPPORT_EMAIL || 'support@amazonrepricer.com'
 };
 
